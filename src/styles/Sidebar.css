@@ -1,0 +1,123 @@
+.sidebar-content{
+    display:flex;
+    flex-direction:column;
+    height:100vh;
+    position:relative;
+    padding:1.5rem 1.25rem 1.25rem 1.25rem;
+    box-sizing:border-box;
+    background-color: var(--color-white);
+}
+
+.sidebar-title{
+    font-size:var(--font-size-2xl);
+    font-weight:600;
+    margin:0;
+    margin-bottom:1.5rem;
+    color:var(--color-text);
+}
+
+.sidebar-add-btn {
+  position: absolute;
+  left: 1.25rem;
+  bottom: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-size: var(--font-size-xl);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sidebar-add-btn:hover,
+.sidebar-add-btn:focus {
+  background: var(--color-primary-light);
+  transform: scale(1.05);
+  box-shadow: var(--shadow-lg);
+}
+
+.sidebar-group-list {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.sidebar-group-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  background: #f5f6fa;
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.sidebar-group-item:hover {
+  background: #eef1f8;
+}
+
+.sidebar-group-item.selected {
+  background: #e0e7ff;
+  border: 2px solid var(--color-primary-light);
+}
+
+.sidebar-group-color {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 2px solid var(--color-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.sidebar-group-name {
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar-group-initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-white);
+  background: inherit;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  .sidebar-content {
+    padding: 1.25rem 1rem 1rem 1rem;
+  }
+  .sidebar-title {
+    font-size: var(--font-size-xl);
+    margin-bottom: 1.25rem;
+  }
+  .sidebar-group-item {
+    padding: 0.4rem 0.6rem;
+    font-size: var(--font-size-sm);
+  }
+  .sidebar-group-color,
+  .sidebar-group-initials {
+    width: 24px;
+    height: 24px;
+  }
+}
